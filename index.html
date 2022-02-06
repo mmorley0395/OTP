@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo: Add points to a web map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="map">
+      <div id="chartbox">
+        <div id="header">
+          Welcome to DVRPC's Regional Transit Screening Priority Tool (RTSP).
+        </div>
+        <div id="routedesc">Please click a tranit line!</div>
+        <div class="chart-container">
+          <canvas id="chart"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
