@@ -67,14 +67,13 @@ map.on("load", () => {
     },
   });
 
-  // Add a popup to the map when the user mouses over a RR line
   map.on("mouseenter", "rtsp", (e) => {
     // get the attributes for the specific feature under the mouse
-    let properties = e.features[0].properties;
-    let line = properties["linename"];
-    let message = `
-<h3>Route ${line}</h3>
-    `;
+    let message = "<h1> Routes </h1><ul>";
+    e.features.forEach((feature) => {
+      message += `<li>${feature.properties.linename}</li>`;
+    });
+    message += "</ul>";
     let popup = new mapboxgl.Popup({
       closeButton: false,
       className: "popup-style",
@@ -83,8 +82,6 @@ map.on("load", () => {
     popup.setLngLat(e.lngLat).setHTML(message).addTo(map);
   });
 
-  // Remove popup from the map when the user's mouse is no longer
-  // hovering over a RR lineß
   map.on("mouseleave", "rtsp", (e) => {
     // get all HTML elements with the class name 'popup-style'
     let popup = document.getElementsByClassName("popup-style");
