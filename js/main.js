@@ -1,14 +1,5 @@
-// Step 1: create the "map" object
-// -------------------------------
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiZHZycGNvbWFkIiwiYSI6ImNrczZlNDBkZzFnOG0ydm50bXR0dTJ4cGYifQ.VaJDo9EtH2JyzKm3cC0ypA";
-
-const map = new mapboxgl.Map({
-  container: "map",
-  style: "mapbox://styles/dvrpcomad/ckz2yw8nu000y14mkkuzicgwn",
-  center: [-75.16362, 39.95238],
-  zoom: 9.5,
-});
+import { makemap } from "./map.js";
+let map = makemap();
 
 var data = {
   labels: [],
