@@ -12,7 +12,7 @@ function removeData(chart) {
   chart.update();
 }
 
-const makechart = () => {
+const make_chart = () => {
   var options = {
     maintainAspectRatio: false,
     scales: {
@@ -53,4 +53,4 @@ const makechart = () => {
   });
 };
 
-export { addData, removeData, makechart };
+export { addData, removeData, make_chart };
